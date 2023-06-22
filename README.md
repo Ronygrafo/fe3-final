@@ -15,7 +15,7 @@ Examen Final de Frontend III
   - [Formato de Entrega](#formato-de-entrega)
 
 ## Requisitos
-[X] Es indispensable clonar este proyecto...
+- [X] Es indispensable clonar este proyecto...
 
 ### Condiciones de aprobación
 
