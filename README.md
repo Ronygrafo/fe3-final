@@ -1,11 +1,19 @@
 # ctd-fe3-final
 
-Examen Final de Frontend III
+Examen Final de Frontend III - Camada 1
 
+## Integrantes
+
+- Lucas Gustavo Díaz
+- Rony Romero Duque
+
+***
 
 ## To Do
+
+#### Setear
 - [X] Clonar este proyecto...
-- [X] Setear Colaboracion
+- [X] Asignar Colaboración
 #### Desarrollo
 - [ ] Paso 1: Creación de rutas
 - [ ] Paso 2: Creación de componentes para cada ruta
@@ -13,43 +21,45 @@ Examen Final de Frontend III
 - [ ] Paso 4: Consumir Contexto Global
 - [ ] Paso 4: Funcionalidad de destacados
 - [ ] Paso 6: Estilado de componentes clave
+#### Funcionalidades
+- [ ] (4) páginas: Home, Contacto, Detalle de cada dentista, Destacados
+- [ ] La correcta navegacion entre las paginas
+- [ ] Presencia homogenea en todas las paginas del Navbar & Footer
+- [ ] Creación del Context
+    - [ ] Tema de colores para toda la app
+    - [ ] Información traída por la API
+    - [ ] Implementar el hook useReducer al Estado Global
+- [ ] Funcionalidad de destacados
+    - [ ] Cada card renderizada debe tener la opción de poder agregarse a destacados.
+    - [ ] Deberan guardar las cards destacadas en la sesión actual del localStorage
+    - [ ] Manejar dicho comportamiento con el hook useReducer
+- [ ] **Pag.1  Inicio Home** deberá mostrar un listado en forma de grilla de los dentistas devueltos por la API
+    - [ ] Deberá ser la página de inicio de la web.
+    - [ ] La grilla deberá mostrar una **Card** por cada dentista devuelto por la API.
+    - [ ] Cada dentista deberá contener `name` y `username`, un boton `ADD FAV` (al localStorage como fav) y un `link` que permita su navegacion a la pagina _dentist/:id_ en base al id del dentista.
+    - [ ] Cada Card debe integrar la funcionalidad de agregar a destacados
+- [ ] **Pag2. Contacto** Implementar un Form (validaciones pertinentes) que capture la información del usuario. Los campos:
+    - [ ] Nombre completo (con longitud mayor a 5)
+    - [ ] Email (con formato correcto de email)
+    - [ ] En caso de error mostrar: **Por favor verifique su información nuevamente**
+    - [ ] Una vez "enviado". Mensaje: **Gracias _[nombre usuario]_, te contactaremos cuando antes vía mail**
+- [ ] **Pag.3  Detalle del dentista** Mostrar un detalle de un dentista individual de la API.
+  - [ ] Deberá estar en la ruta `/dentist/:id`.
+  - [ ] La página deberá indicar al menos la siguiente información:
+    - [ ] Nombre del personaje
+    - [ ] Email
+    - [ ] Telefono
+    - [ ] Sitio web
+- [ ] **Pag4. Destacados** Renderizar las **Cards** pertinentes a los dentistas destacados. Dicha información deberá estar almacenada dentro del localStorage del browser y ser consumida dentro de la pagina
+    - [ ] Se deberá estar en la ruta `/favs`.
 
+- [ ] **ESTILOS** En base al tema (claro / oscuro) consumido del contexto global, estilar las cuatro *Rutas* de la App
 
+## Resultado final
 
-## Indice
+Video como ejemplo de cómo debería funcionar tu aplicación, en la carpeta [public](/public/)
 
-- [Requisitos](#requisitos)
-  - [Condiciones mínimas de aprobación](#condiciones-mínimas-de-aprobación)
-  - [Aspectos que modifican la valoración final de la nota](#aspectos-que-modifican-la-valoración-final-de-la-nota)
-- [Funcionalidades](#funcionalidades)
-- [Desarrollo](#desarrollo)
-- [API](#api)
-- [Entrega](#entrega)
-  - [Fecha de Entrega](#fecha-de-entrega)
-  - [Formato de Entrega](#formato-de-entrega)
-
-
-
-
-
-
-
-
-
-### Condiciones de aprobación
-
-Las siguientes condiciones son requisitos mínimos necesarios para la aprobación del final:
-
-- **Cumplir con todas las funcionalidades obligatorias**
-- Solo se podrán utilizar las librerías que se detallan en este README. Ver [Dependencias](docs/desarrollo.md#dependencias)
-- No se considerará realizada cualquier funcionalidad que sea implementada utilizando una librería distinta a las permitidas.
-- Deberá ser desarrollada utilizando Javascript con React.js como libreria.
-- Se espera que la página de Contacto, contenga los flujos de validación necesarios (minimo 2 validaciones), para un correcto submit del formulario.
-- En los casos en que se requiera dar estilos a componentes, deberá realizarse teniendo en cuenta el theme del contexto global.
-
-### Aspectos que modifican la valoración final de la nota
-
-Los siguientes aspectos son extras al requisito mínimo de aprobación que serán tenidos en cuenta para aumentar la nota final, siempre y cuando su implementación sea correcta:
+***
 
 **Validaciones**
 
@@ -58,15 +68,6 @@ Los siguientes aspectos son extras al requisito mínimo de aprobación que será
 **Funcionalidad de destacados**
 
 - Se valorará funcionalidades extra a esta feature, como lo pueden ser el eliminar de destacadados, manejo de errores al intentar agregar repetidos y reseteo total de los destacados.
-
-
-**Estilos**
-
-- Se valorará el estilado de demas apartados de la App (por fuera del estilado obligatorio de las rutas en base al theme)
-
-**Buenas Prácticas**
-
-- Se prestará especial atención al uso de buenas prácticas, mejoras de performance (implementando useMemo) y la reutilizacion de codigo
 
 ## Funcionalidades
 
