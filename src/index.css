@@ -19,31 +19,13 @@ code {
   cursor: pointer;
 }
 
-h1 {
-  text-align: center;
-}
-
-nav {
-  display: flex;
-  width: 80vw;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  margin: auto;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 16px;
-}
-
 a {
   color: #000;
   text-decoration: none;
   margin: 5px;
   cursor: pointer;
 }
+
 a:hover {
   color: rgb(136, 136, 136);
 }
