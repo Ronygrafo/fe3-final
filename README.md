@@ -2,6 +2,20 @@
 
 Examen Final de Frontend III
 
+
+## To Do
+- [X] Clonar este proyecto...
+- [X] Setear Colaboracion
+#### Desarrollo
+- [ ] Paso 1: Creación de rutas
+- [ ] Paso 2: Creación de componentes para cada ruta
+- [ ] Paso 3: Implementación del Contexto Global
+- [ ] Paso 4: Consumir Contexto Global
+- [ ] Paso 4: Funcionalidad de destacados
+- [ ] Paso 6: Estilado de componentes clave
+
+
+
 ## Indice
 
 - [Requisitos](#requisitos)
@@ -14,8 +28,13 @@ Examen Final de Frontend III
   - [Fecha de Entrega](#fecha-de-entrega)
   - [Formato de Entrega](#formato-de-entrega)
 
-## Requisitos
-- [X] Es indispensable clonar este proyecto...
+
+
+
+
+
+
+
 
 ### Condiciones de aprobación
 
