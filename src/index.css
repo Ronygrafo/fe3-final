@@ -151,3 +151,16 @@ tr:nth-child(even) {
 .content-wrap {
   padding-bottom: 136px;
 }
+
+/* ESTILOS AGREGADOS */
+
+/* Header y Parrafos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  text-align: center;
+}

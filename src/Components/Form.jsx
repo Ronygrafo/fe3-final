@@ -10,6 +10,13 @@ const Form = () => {
     email: "",
   });
 
+  const [show, setShow] = useState(false)
+
+  const errMessage = {
+    errName: "Tu nombre no es válido, por favor verificalo",
+    errEmail: "Porfa, danos tu Email correcto 🙂",
+  }
+
   const handleNameData = (e) =>{
     // Validar NOMBRE con longitud mayor a 5 y sin Espacio en blanco al iniciar
 
@@ -18,7 +25,9 @@ const Form = () => {
       setLeadData({
         ...leadData,
         name: e.target.value})
-    };
+    } else {
+      console.log(errMessage.errName);
+    }
     //console.log(leadData);
   }
 
@@ -32,7 +41,9 @@ const Form = () => {
       setLeadData({
         ...leadData,
         email: e.target.value})
-    };
+    }else {
+      console.log(errMessage.errEmail);
+    }
     //console.log(leadData);
   }
 
@@ -43,6 +54,7 @@ const Form = () => {
   }
 
   return (
+    <>
     <div>
     <form onSubmit={handleSubmit}>
 
@@ -56,6 +68,10 @@ const Form = () => {
 
     </form>
     </div>
+    <p>
+      Mensaje output Aqui
+    </p>
+    </>
   );
 };
 
