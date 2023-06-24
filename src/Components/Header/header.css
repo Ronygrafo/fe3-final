@@ -24,10 +24,52 @@ header h1 span {
   color: rgb(236, 47, 47);
 }
 
+nav a.active {
+  font-weight: bold;
+  pointer-events: none;
+}
+
 nav ul {
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 16px;
   margin: 0;
   padding: 0;
+}
+
+nav .theme-switch {
+  padding: 1px;
+  border-radius: 1.5rem;
+  background-color: rgb(253 186 116 / 1);
+}
+
+nav .theme-switch button {
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  padding: 0.5rem;
+  outline: none;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav .theme-switch button.bg-white {
+  background-color: rgb(255 255 255 / 1);
+  color: rgb(0 0 0 / 1);
+}
+
+.dark nav .theme-switch {
+  background-color: rgb(82 82 91 / 1);
+}
+
+.dark header button,
+.dark header a {
+  color: #e5e7eb;
+}
+
+.dark header {
+  background-color: #2b3035;
 }

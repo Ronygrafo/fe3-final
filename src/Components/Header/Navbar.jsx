@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+import ThemeToggleButton from './ThemeToggleButton'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -9,15 +10,17 @@ const Navbar = () => {
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
       <ul>
         <li>
-          <Link to='/'>Home</Link>
+          <NavLink to='/' end>
+            Home
+          </NavLink>
         </li>
         <li>
-          <Link to='/contact'>Contact</Link>
+          <NavLink to='/contact'>Contact</NavLink>
         </li>
         <li>
-          <Link to='/favs'>Favs</Link>
+          <NavLink to='/favs'>Favs</NavLink>
         </li>
-        <button>Change theme</button>
+        <ThemeToggleButton />
       </ul>
     </nav>
   )
