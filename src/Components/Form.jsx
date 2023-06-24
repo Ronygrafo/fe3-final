@@ -47,10 +47,10 @@ const Form = () => {
     <form onSubmit={handleSubmit}>
 
       <input type="text" name="name" placeholder="Nombre completo"
-      onBlur={handleNameData}/>
+      onChange={handleNameData}/>
 
       <input type="text" name="email" placeholder="Tu e-mail"
-      onBlur={handleEmailData}/>
+      onChange={handleEmailData}/>
 
       <button type="submit"> Enviar </button>
 
