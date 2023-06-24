@@ -9,13 +9,15 @@ import Detail from './Routes/Detail'
 function App() {
   return (
     <div className='App'>
-      <Header />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/detail/:id' element={<Detail />} />
-        <Route path='/favs' element={<Favs />} />
-      </Routes>
+      <div className='content-wrap'>
+        <Header />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/contact' element={<Contact />} />
+          <Route path='/detail/:id' element={<Detail />} />
+          <Route path='/favs' element={<Favs />} />
+        </Routes>
+      </div>
       <Footer />
     </div>
   )

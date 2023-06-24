@@ -33,12 +33,11 @@ a:hover {
 footer {
   display: flex;
   justify-content: center;
-  text-align: center;
-  padding: 2rem;
-  position: relative;
+  align-items: center;
+  width: 100%;
+  position: absolute;
   bottom: 0;
-  height: 40px;
-  margin-top: 2rem;
+  height: 104px;
   background-color: #f8f9fa;
 }
 
@@ -48,7 +47,6 @@ footer > img {
 }
 footer > p {
   margin: 0;
-  padding-top: 0.7rem;
 }
 
 .dark footer {
@@ -143,4 +141,13 @@ tr:nth-child(even) {
 }
 .dark > a {
   color: white;
+}
+
+.App {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrap {
+  padding-bottom: 136px;
 }
