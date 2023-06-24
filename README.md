@@ -45,8 +45,9 @@ Examen Final de Frontend III - Camada 1
   - [ ] Cada dentista deberá contener `name` y `username`, un boton `ADD FAV` (al localStorage como fav) y un `link` que permita su navegacion a la pagina _dentist/:id_ en base al id del dentista.
   - [ ] Cada Card debe integrar la funcionalidad de agregar a destacados
 - [ ] **Pag2. Contacto** Implementar un Form (validaciones pertinentes) que capture la información del usuario. Los campos:
-  - [ ] Nombre completo (con longitud mayor a 5)
-  - [ ] Email (con formato correcto de email)
+  - [X] Nombre completo (con longitud mayor a 5)
+  - [X] Email (con formato correcto de email)
+  - [X] Mostrar por Consola datos Submitiados
   - [ ] En caso de error mostrar: **Por favor verifique su información nuevamente**
   - [ ] Una vez "enviado". Mensaje: **Gracias _[nombre usuario]_, te contactaremos cuando antes vía mail**
 - [ ] **Pag.3 Detalle del dentista** Mostrar un detalle de un dentista individual de la API.
