@@ -1,4 +1,4 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import { BsHeart, BsHeartFill } from 'react-icons/bs'
 
 const Card = ({ name, username, id }) => {
@@ -7,7 +7,7 @@ const Card = ({ name, username, id }) => {
   }
 
   return (
-    <div className='card'>
+    <Link className='card' to={`/detail/${id}`}>
       <img src='./images/doctor.jpg' alt='doctor' />
       {/* En cada card deberan mostrar en name - username y el id */}
       <p>{name}</p>
@@ -19,7 +19,7 @@ const Card = ({ name, username, id }) => {
       <button onClick={addFav} className='favButton'>
         <BsHeart />
       </button>
-    </div>
+    </Link>
   )
 }
 
