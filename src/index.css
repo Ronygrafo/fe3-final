@@ -37,9 +37,9 @@ footer {
   padding: 2rem;
   position: relative;
   bottom: 0;
-  width: 90%;
   height: 40px;
   margin-top: 2rem;
+  background-color: #f8f9fa;
 }
 
 footer > img {
@@ -49,6 +49,10 @@ footer > img {
 footer > p {
   margin: 0;
   padding-top: 0.7rem;
+}
+
+.dark footer {
+  background-color: #2b3035;
 }
 
 form {
