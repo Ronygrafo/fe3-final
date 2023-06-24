@@ -15,6 +15,7 @@ Examen Final de Frontend III - Camada 1
 
 - [x] Clonar este proyecto...
 - [x] Asignar Colaboración
+- [x] Deployment en Vercel [ver publicado](https://dh-front3-final.vercel.app/)
 
 #### Desarrollo
 
