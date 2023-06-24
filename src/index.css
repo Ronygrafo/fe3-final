@@ -106,6 +106,14 @@ form {
   padding: 0;
 }
 
+a.card {
+  color: black;
+}
+
+.dark a.card {
+  color: white;
+}
+
 .dark .favButton {
   color: white;
 }
