@@ -5,6 +5,7 @@ header {
   position: sticky;
   top: 0;
   padding: 1rem;
+  z-index: 1;
 }
 
 header .container {
