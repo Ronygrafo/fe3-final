@@ -1,8 +1,21 @@
-import { createContext, useState, useEffect } from 'react'
+import { createContext, useState, useEffect, useReducer } from 'react'
 
 export const initialState = { theme: '', data: [] }
 
 export const ContextGlobal = createContext(undefined)
+
+const initFavState = JSON.parse(localStorage.getItem('favs')) || []
+
+const favReducer = (state, action) => {
+  switch (action.type) {
+    case 'ADD_FAV':
+      return [...state, action.payload]
+    case 'DELETE_FAV':
+      return state.filter(fav => fav !== action.payload)
+    default:
+      throw new Error()
+  }
+}
 
 export const ContextProvider = ({ children }) => {
   //Aqui deberan implementar la logica propia del Context
@@ -18,8 +31,15 @@ export const ContextProvider = ({ children }) => {
     fetchDentists()
   }, [])
 
+  const [favState, favDispatch] = useReducer(favReducer, initFavState)
+
+  useEffect(() => {
+    console.log(favState)
+    localStorage.setItem('favs', JSON.stringify(favState))
+  }, [favState])
+
   return (
-    <ContextGlobal.Provider value={{ dentists }}>
+    <ContextGlobal.Provider value={{ dentists, favState, favDispatch }}>
       {children}
     </ContextGlobal.Provider>
   )
