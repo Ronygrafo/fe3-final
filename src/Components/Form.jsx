@@ -10,13 +10,13 @@ const Form = () => {
     email: {value: "", isOK: null},
   });
 
-/*   function checkInputsData() {
+  function checkInputsData() {
 
-    if (leadData.name.isOK === null) {
-
+    if (leadData.name.isOK === null  || leadData.email.isOK === null) {
+      return undefined
     }
 
-  } */
+  }
 
   const errMessage = {
     errName: "Tu Nombre Completo es muy corto!, por favor verificalo",
@@ -84,13 +84,13 @@ const Form = () => {
       <input type="text" name="name" placeholder="Nombre completo"
       onChange={handleNameData}/>
 
-      {leadData.name.isOK ? <></> :  <p>{errMessage.errName}</p>}
+      {leadData.name.isOK ? <></> :  <p className="warning" >{errMessage.errName}</p>}
       
 
       <input type="text" name="email" placeholder="Tu e-mail"
       onChange={handleEmailData}/>
 
-      {leadData.email.isOK ? <></> :  <p>{errMessage.errEmail}</p>}
+      {leadData.email.isOK ? <></> :  <p className="warning">{errMessage.errEmail}</p>}
 
       <button type="submit"> Enviar </button>
 
