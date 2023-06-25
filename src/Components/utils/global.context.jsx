@@ -11,7 +11,7 @@ const favReducer = (state, action) => {
     case 'ADD_FAV':
       return [...state, action.payload]
     case 'DELETE_FAV':
-      return state.filter(fav => fav !== action.payload)
+      return state.filter(fav => fav.id !== action.payload)
     default:
       throw new Error()
   }

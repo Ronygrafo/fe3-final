@@ -87,6 +87,27 @@ form button {
   background-color: #2b3035;
 }
 
+.card-wraper {
+  position: relative;
+}
+
+.card-wraper button {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 1.2rem;
+  height: 1.2rem;
+  padding: 0;
+}
+
+.card-wraper button svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
 .card {
   display: flex;
   justify-content: space-around;
@@ -94,9 +115,10 @@ form button {
   align-items: center;
   width: 200px;
   border: 0.5px solid rgb(136, 136, 136);
-  gap: 16px;
+  gap: 12px;
   border-radius: 10px;
   background-color: #f8f9fa;
+  padding-bottom: 12px;
 }
 
 .dark .card {
@@ -139,6 +161,10 @@ a.card {
 
 .dark .favButton {
   color: white;
+}
+
+.favButton.favorited {
+  color: rgb(236, 47, 47);
 }
 
 table {
