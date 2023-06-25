@@ -77,7 +77,8 @@ form {
   margin-top: 0rem;
 }
 
-form input, button{
+form input,
+form button {
   margin: 0.5rem 0;
   padding: 0.2rem;
 }
@@ -188,4 +189,3 @@ h6,
 p {
   text-align: center;
 }
-
