@@ -11,17 +11,23 @@ const Form = () => {
   });
 
   function checkInputsData() {
-
     if (leadData.name.isOK === null  || leadData.email.isOK === null) {
       return undefined
     }
 
+    if (leadData.name.isOK === true  && leadData.email.isOK === true) {
+      return true
+    }
+    
+    else { return false; }
+
   }
 
   const errMessage = {
-    errName: "Tu Nombre Completo es muy corto!, por favor verificalo",
+    errName: "Tu Nombre Completo es muy corto!, porfa verificalo",
     errEmail: "Porfa, danos tu Email correcto 🙂",
   }
+  const successMessage = `Gracias ${leadData.name.value}, pronto te escribimos!`
 
   const handleNameData = (e) =>{
     // Validar NOMBRE con longitud mayor a 5 y sin espacio en blanco al iniciar
@@ -56,10 +62,6 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    //console.log(`Hay errores?`);
-
- 
-
     console.log(leadData.name.isOK);
     console.log(leadData.email.isOK);
     console.log("-");
@@ -93,6 +95,7 @@ const Form = () => {
       {leadData.email.isOK ? <></> :  <p className="warning">{errMessage.errEmail}</p>}
 
       <button type="submit"> Enviar </button>
+      {checkInputsData() ? <p className="success">{successMessage}</p> : <></>}
 
     </form>
     </div>

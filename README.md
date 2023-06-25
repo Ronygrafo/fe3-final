@@ -48,8 +48,9 @@ Examen Final de Frontend III - Camada 1
   - [x] Nombre completo (con longitud mayor a 5)
   - [x] Email (con formato correcto de email)
   - [x] Mostrar por Consola datos Submitiados
-  - [ ] En caso de error mostrar: **Por favor verifique su información nuevamente**
-  - [ ] Una vez "enviado". Mensaje: **Gracias _[nombre usuario]_, te contactaremos cuando antes vía mail**
+  - [x] En caso de error mostrar: **Por favor verifique su información nuevamente**
+  - [x] Una vez "enviado". Mensaje: **Gracias _[nombre usuario]_, te contactaremos cuando antes vía mail**
+  - [ ] Ocultar Errores al inicializar, mostrarlos ddespués de la interaccíon
 - [ ] **Pag.3 Detalle del dentista** Mostrar un detalle de un dentista individual de la API.
   - [ ] Deberá estar en la ruta `/dentist/:id`.
   - [ ] La página deberá indicar al menos la siguiente información:

@@ -59,20 +59,31 @@ form {
   justify-content: space-around;
   width: 300px;
   margin: 2rem auto;
-  padding: 1.5rem 1rem;
-  border: 1px solid #000;
+  padding: 1.2rem 1rem;
   border-radius: 1rem;
+  background-color: #f8f9fa;
 }
 
-form .warning{
+.warning {
   color: rgb(236, 47, 47);
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   font-weight: 700;
+  margin-top: 0rem;
+}
+.success {
+  color: #3da536;
+  font-size: 0.7rem;
+  font-weight: 700;
+  margin-top: 0rem;
 }
 
 form input, button{
-  margin: 0.4rem 0;
+  margin: 0.5rem 0;
   padding: 0.2rem;
+}
+
+.dark form {
+  background-color: #2b3035;
 }
 
 .card {
