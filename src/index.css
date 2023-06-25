@@ -53,40 +53,6 @@ footer > p {
   background-color: #2b3035;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 300px;
-  margin: 2rem auto;
-  padding: 1.2rem 1rem;
-  border-radius: 1rem;
-  background-color: #f8f9fa;
-}
-
-.warning {
-  color: rgb(236, 47, 47);
-  font-size: 0.7rem;
-  font-weight: 700;
-  margin-top: 0rem;
-}
-.success {
-  color: #3da536;
-  font-size: 0.7rem;
-  font-weight: 700;
-  margin-top: 0rem;
-}
-
-form input,
-form button {
-  margin: 0.5rem 0;
-  padding: 0.2rem;
-}
-
-.dark form {
-  background-color: #2b3035;
-}
-
 .card-wraper {
   position: relative;
 }
