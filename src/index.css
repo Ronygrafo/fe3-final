@@ -87,6 +87,27 @@ form button {
   background-color: #2b3035;
 }
 
+.card-wraper {
+  position: relative;
+}
+
+.card-wraper button {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 1.2rem;
+  height: 1.2rem;
+  padding: 0;
+}
+
+.card-wraper button svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
 .card {
   display: flex;
   justify-content: space-around;

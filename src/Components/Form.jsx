@@ -96,12 +96,8 @@ const Form = () => {
             <p className="warning">{errMessage.errEmail}</p>
           )}
 
-          { (leadData.name.isOK === null || leadData.email.isOK === null) ?
-          <button disabled> Enviar </button> :
-          <button type="submit" className="active"> Enviar </button>}
-
-          {show && <p className="success">{successMessage}</p> }
-          
+          <button type="submit"> Enviar </button>
+          {show ? <p className="success">{successMessage}</p> : <></>}
         </form>
       </div>
     </>
