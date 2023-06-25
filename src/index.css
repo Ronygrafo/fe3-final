@@ -77,7 +77,8 @@ form {
   margin-top: 0rem;
 }
 
-form input, button{
+form input,
+form button {
   margin: 0.5rem 0;
   padding: 0.2rem;
 }
@@ -93,9 +94,10 @@ form input, button{
   align-items: center;
   width: 200px;
   border: 0.5px solid rgb(136, 136, 136);
-  gap: 16px;
+  gap: 12px;
   border-radius: 10px;
   background-color: #f8f9fa;
+  padding-bottom: 12px;
 }
 
 .dark .card {
@@ -138,6 +140,10 @@ a.card {
 
 .dark .favButton {
   color: white;
+}
+
+.favButton.favorited {
+  color: rgb(236, 47, 47);
 }
 
 table {
@@ -188,4 +194,3 @@ h6,
 p {
   text-align: center;
 }
-

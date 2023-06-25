@@ -44,13 +44,13 @@ Examen Final de Frontend III - Camada 1
   - [ ] La grilla deberá mostrar una **Card** por cada dentista devuelto por la API.
   - [ ] Cada dentista deberá contener `name` y `username`, un boton `ADD FAV` (al localStorage como fav) y un `link` que permita su navegacion a la pagina _dentist/:id_ en base al id del dentista.
   - [ ] Cada Card debe integrar la funcionalidad de agregar a destacados
-- [x] **Pag2. Contacto** Implementar un Form (validaciones pertinentes) que capture la información del usuario. Los campos:
+- [ ] **Pag2. Contacto** Implementar un Form (validaciones pertinentes) que capture la información del usuario. Los campos:
   - [x] Nombre completo (con longitud mayor a 5)
   - [x] Email (con formato correcto de email)
   - [x] Mostrar por Consola datos Submitiados
   - [x] En caso de error mostrar: **Por favor verifique su información nuevamente**
   - [x] Una vez "enviado". Mensaje: **Gracias _[nombre usuario]_, te contactaremos cuando antes vía mail**
-  - [x] Ocultar Errores al inicializar, mostrarlos ddespués de la interaccíon
+  - [ ] Ocultar Errores al inicializar, mostrarlos ddespués de la interaccíon
 - [ ] **Pag.3 Detalle del dentista** Mostrar un detalle de un dentista individual de la API.
   - [ ] Deberá estar en la ruta `/dentist/:id`.
   - [ ] La página deberá indicar al menos la siguiente información:
