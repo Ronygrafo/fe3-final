@@ -192,10 +192,14 @@ p {
 .back-btn {
   position: absolute;
   left: 10%;
-  top: 100px;
+  top: 94px;
   height: 30px;
   background: transparent;
   font-size: 2rem;
   cursor: pointer;
   border: none;
+}
+
+.detail-heading{
+  font-size: 1.7rem;
 }

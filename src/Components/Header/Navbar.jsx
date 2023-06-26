@@ -10,15 +10,13 @@ const Navbar = () => {
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
       <ul>
         <li>
-          <NavLink to='/' end>
-            Home
-          </NavLink>
+          <NavLink to='/' end> Inicio</NavLink>
         </li>
         <li>
-          <NavLink to='/contact'>Contact</NavLink>
+          <NavLink to='/contact'>Contacto</NavLink>
         </li>
         <li>
-          <NavLink to='/favs'>Favs</NavLink>
+          <NavLink to='/favs'>Favoritos</NavLink>
         </li>
         <ThemeToggleButton />
       </ul>

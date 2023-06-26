@@ -19,15 +19,15 @@ const Detail = () => {
       <button className='back-btn' onClick={() => navigate(-1)}>
         <BsArrowLeft />
       </button>
-      <h1 className='detail-heading'>{currentDentist?.name}</h1>
+      <h1 className='detail-heading'>Detalle del Dentista</h1>
 
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
 
       <div className='card-grid'>
-        <div className='card' style={{ width: '260px' }}>
+        <div className='card' style={{ width: '260px' , gap: '8px' }}>
           <img src='../images/doctor.jpg' alt='doctor' />
-          <p>{currentDentist?.name}</p>
+          <h3 style={{margin: '0' }}>{currentDentist?.name}</h3>
           <strong>
             <p>ID: {currentDentist?.id}</p>
           </strong>
