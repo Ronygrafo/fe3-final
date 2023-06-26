@@ -189,16 +189,10 @@ p {
   justify-content: center;
 }
 
-.detail-heading {
-  display: inline-block;
-  width: 100%;
-  margin-top: 0;
-}
-
 .back-btn {
-  position: relative;
+  position: absolute;
   left: 10%;
-  top: 32px;
+  top: 100px;
   height: 30px;
   background: transparent;
   font-size: 2rem;
