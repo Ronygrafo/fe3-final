@@ -10,7 +10,7 @@ const Home = () => {
   // console.log(dentists)
 
   return (
-    <main className=''>
+    <>
       <h1>Los Mejores Dentistas</h1>
       <p>a un solo click</p>
       <div className='card-grid'>
@@ -19,7 +19,7 @@ const Home = () => {
           <Card key={dentist.id} {...dentist} />
         ))}
       </div>
-    </main>
+    </>
   )
 }
 
