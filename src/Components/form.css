@@ -2,10 +2,11 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  gap: 1rem;
   max-width: 340px;
   min-width: 280px;
   margin: 2rem auto;
-  padding: 1.4rem 1.2rem;
+  padding: 2rem;
   border-radius: 1rem;
   background-color: #f8f9fa;
 }
@@ -25,15 +26,11 @@ form {
 }
 
 form input {
-  margin: 0.5rem 0;
   padding: 0.2rem;
   height: 24px;
 }
 
 form button {
-  margin: 0.5rem 0;
-  padding: 0.4rem;
-  height: 32px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -41,7 +38,14 @@ form button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   border: rgb(118, 118, 118);
-  border-radius: 2px;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 0.7rem;
+}
+
+form input {
+  border-radius: 15px;
+  padding: 0.5rem;
 }
 
 .btn-able:hover {
