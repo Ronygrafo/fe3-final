@@ -181,3 +181,27 @@ h6,
 p {
   text-align: center;
 }
+
+.title-bar {
+  display: flex;
+  width: 100vw;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.detail-heading {
+  display: inline-block;
+  width: 100%;
+  margin-top: 0;
+}
+
+.back-btn {
+  position: relative;
+  left: 10%;
+  top: 32px;
+  height: 30px;
+  background: transparent;
+  font-size: 2rem;
+  cursor: pointer;
+  border: none;
+}
