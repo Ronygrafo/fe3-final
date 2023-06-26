@@ -34,7 +34,7 @@ export const ContextProvider = ({ children }) => {
   const [favState, favDispatch] = useReducer(favReducer, initFavState)
 
   useEffect(() => {
-    console.log(favState)
+    // console.log(favState)
     localStorage.setItem('favs', JSON.stringify(favState))
   }, [favState])
 
