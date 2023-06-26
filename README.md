@@ -34,11 +34,11 @@ Examen Final de Frontend III - Camada 1
 - [x] Creación del Context
   - [x] Tema de colores para toda la app
   - [x] Información traída por la API
-  - [ ] Implementar el hook useReducer al Estado Global
+  - [x] Implementar el hook useReducer al Estado Global
 - [ ] Funcionalidad de destacados
-  - [ ] Cada card renderizada debe tener la opción de poder agregarse a destacados.
-  - [ ] Deberan guardar las cards destacadas en la sesión actual del localStorage
-  - [ ] Manejar dicho comportamiento con el hook useReducer
+  - [x] Cada card renderizada debe tener la opción de poder agregarse a destacados.
+  - [x] Deberan guardar las cards destacadas en la sesión actual del localStorage
+  - [x] Manejar dicho comportamiento con el hook useReducer
 - [ ] **Pag.1 Inicio Home** deberá mostrar un listado en forma de grilla de los dentistas devueltos por la API
   - [x] Deberá ser la página de inicio de la web.
   - [x] La grilla deberá mostrar una **Card** por cada dentista devuelto por la API.
@@ -60,7 +60,7 @@ Examen Final de Frontend III - Camada 1
     - [x] Sitio web
 - [ ] **Pag4. Destacados** Renderizar las **Cards** pertinentes a los dentistas destacados. Dicha información deberá estar almacenada dentro del localStorage del browser y ser consumida dentro de la pagina
   - [ ] Se deberá estar en la ruta `/favs`.
-- [ ] **ESTILOS** En base al tema (claro / oscuro) consumido del contexto global, estilar las cuatro _Rutas_ de la App
+- [x] **ESTILOS** En base al tema (claro / oscuro) consumido del contexto global, estilar las cuatro _Rutas_ de la App
 
 ## Resultado final
 

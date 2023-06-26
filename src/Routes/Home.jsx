@@ -11,7 +11,8 @@ const Home = () => {
 
   return (
     <main className=''>
-      <h1>Home</h1>
+      <h1>Los Mejores Dentistas</h1>
+      <p>a un solo click</p>
       <div className='card-grid'>
         {/* Aqui deberias renderizar las cards */}
         {dentists.map(dentist => (
