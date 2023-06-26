@@ -40,9 +40,9 @@ Examen Final de Frontend III - Camada 1
   - [ ] Deberan guardar las cards destacadas en la sesión actual del localStorage
   - [ ] Manejar dicho comportamiento con el hook useReducer
 - [ ] **Pag.1 Inicio Home** deberá mostrar un listado en forma de grilla de los dentistas devueltos por la API
-  - [ ] Deberá ser la página de inicio de la web.
-  - [ ] La grilla deberá mostrar una **Card** por cada dentista devuelto por la API.
-  - [ ] Cada dentista deberá contener `name` y `username`, un boton `ADD FAV` (al localStorage como fav) y un `link` que permita su navegacion a la pagina _dentist/:id_ en base al id del dentista.
+  - [x] Deberá ser la página de inicio de la web.
+  - [x] La grilla deberá mostrar una **Card** por cada dentista devuelto por la API.
+  - [x] Cada dentista deberá contener `name` y `username`, un boton `ADD FAV` (al localStorage como fav) y un `link` que permita su navegacion a la pagina _dentist/:id_ en base al id del dentista.
   - [ ] Cada Card debe integrar la funcionalidad de agregar a destacados
 - [x] **Pag2. Contacto** Implementar un Form (validaciones pertinentes) que capture la información del usuario. Los campos:
   - [x] Nombre completo (con longitud mayor a 5)
@@ -51,17 +51,15 @@ Examen Final de Frontend III - Camada 1
   - [x] En caso de error mostrar: **Por favor verifique su información nuevamente**
   - [x] Una vez "enviado". Mensaje: **Gracias _[nombre usuario]_, te contactaremos cuando antes vía mail**
   - [x] Ocultar Errores al inicializar, mostrarlos ddespués de la interaccíon
-- [ ] **Pag.3 Detalle del dentista** Mostrar un detalle de un dentista individual de la API.
-  - [ ] Deberá estar en la ruta `/dentist/:id`.
-  - [ ] La página deberá indicar al menos la siguiente información:
-    - [ ] Nombre del personaje
-    - [ ] Email
-    - [ ] Telefono
-    - [ ] Sitio web
+- [x] **Pag.3 Detalle del dentista** Mostrar un detalle de un dentista individual de la API.
+  - [x] Deberá estar en la ruta `/dentist/:id`.
+  - [x] La página deberá indicar al menos la siguiente información:
+    - [x] Nombre del personaje
+    - [x] Email
+    - [x] Telefono
+    - [x] Sitio web
 - [ ] **Pag4. Destacados** Renderizar las **Cards** pertinentes a los dentistas destacados. Dicha información deberá estar almacenada dentro del localStorage del browser y ser consumida dentro de la pagina
-
   - [ ] Se deberá estar en la ruta `/favs`.
-
 - [ ] **ESTILOS** En base al tema (claro / oscuro) consumido del contexto global, estilar las cuatro _Rutas_ de la App
 
 ## Resultado final

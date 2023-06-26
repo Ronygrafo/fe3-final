@@ -22,7 +22,7 @@ const Detail = () => {
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
 
       <div className='card-grid'>
-      <div className='card'>
+      <div className='card' style={{width: '260px'}} >
           <img src='../images/doctor.jpg' alt='doctor' />
           <p>{currentDentist?.name}</p>
           <strong><p>ID: {currentDentist?.id}</p></strong> 
