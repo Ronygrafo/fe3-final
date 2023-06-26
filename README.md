@@ -28,12 +28,12 @@ Examen Final de Frontend III - Camada 1
 
 #### Funcionalidades
 
-- [ ] (4) páginas: Home, Contacto, Detalle de cada dentista, Destacados
-- [ ] La correcta navegacion entre las paginas
-- [ ] Presencia homogenea en todas las paginas del Navbar & Footer
-- [ ] Creación del Context
-  - [ ] Tema de colores para toda la app
-  - [ ] Información traída por la API
+- [ ] (4) páginas: Home, Contacto, Detalle de cada dentista, **Destacados**
+- [x] La correcta navegacion entre las paginas
+- [x] Presencia homogenea en todas las paginas del Navbar & Footer
+- [x] Creación del Context
+  - [x] Tema de colores para toda la app
+  - [x] Información traída por la API
   - [ ] Implementar el hook useReducer al Estado Global
 - [ ] Funcionalidad de destacados
   - [ ] Cada card renderizada debe tener la opción de poder agregarse a destacados.

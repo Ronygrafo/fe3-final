@@ -74,3 +74,21 @@ nav .theme-switch button.bg-white {
 .dark header {
   background-color: #2b3035;
 }
+
+.title-bar{
+  display: flex;
+  width: 100vw;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.detail-heading{
+  margin: 0;
+  width: 100%;
+}
+
+.back-btn{
+ position: relative;
+ left: 10%;
+ top: 20px;
+}

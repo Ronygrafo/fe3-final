@@ -13,18 +13,26 @@ const Detail = () => {
 
   return (
     <>
-      <button onClick={() => navigate(-1)}>Go back</button>
-      <h1>Dentist id {currentDentist?.id}</h1>
+      {/* <h1>Dentist id {currentDentist?.id}</h1> */}
+      
+      <button className='back-btn' onClick={() => navigate(-1)}>Go back</button>
+      <h1 className='detail-heading'>{currentDentist?.name}</h1>
+
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
+
+      <div className='card-grid'>
       <div className='card'>
-        <img src='../images/doctor.jpg' alt='doctor' />
-        <p>{currentDentist?.name}</p>
-        <p>{currentDentist?.email}</p>
-        <p>{currentDentist?.phone}</p>
-        <p>{currentDentist?.website}</p>
+          <img src='../images/doctor.jpg' alt='doctor' />
+          <p>{currentDentist?.name}</p>
+          <strong><p>ID: {currentDentist?.id}</p></strong> 
+          <p>{currentDentist?.email}</p>
+          <p>{currentDentist?.phone}</p>
+          <p>{currentDentist?.website}</p>
+        </div>
       </div>
     </>
+
   )
 }
 
