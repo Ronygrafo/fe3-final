@@ -83,12 +83,14 @@ nav .theme-switch button.bg-white {
 }
 
 .detail-heading{
-  margin: 0;
+  display: inline-block;
   width: 100%;
+  margin-top: 0;
 }
 
 .back-btn{
  position: relative;
  left: 10%;
- top: 20px;
+ top: 32px;
+ height: 30px;
 }
