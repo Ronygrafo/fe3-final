@@ -5,7 +5,7 @@ import Card from '../Components/Card'
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Home = () => {
-  const { dentists } = useContext(ContextGlobal)
+  const { dentistsState } = useContext(ContextGlobal)
 
   // console.log(dentists)
 
@@ -15,7 +15,7 @@ const Home = () => {
       <p>a un solo click</p>
       <div className='card-grid'>
         {/* Aqui deberias renderizar las cards */}
-        {dentists.map(dentist => (
+        {dentistsState.dentistsList.map(dentist => (
           <Card key={dentist.id} {...dentist} />
         ))}
       </div>

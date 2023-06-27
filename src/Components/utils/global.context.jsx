@@ -1,35 +1,35 @@
-import { createContext, useState, useEffect, useReducer } from 'react'
+import axios from 'axios'
+import { createContext, useEffect, useReducer } from 'react'
+import { dentistsReducer, favReducer } from './reducers'
 
 export const initialState = { theme: '', data: [] }
 
 export const ContextGlobal = createContext(undefined)
 
-const initFavState = JSON.parse(localStorage.getItem('favs')) || []
+const initDentistsState = { dentistsList: [], dentist: {} }
 
-const favReducer = (state, action) => {
-  switch (action.type) {
-    case 'ADD_FAV':
-      return [...state, action.payload]
-    case 'DELETE_FAV':
-      return state.filter(fav => fav.id !== action.payload)
-    default:
-      throw new Error()
-  }
-}
+const initFavState = JSON.parse(localStorage.getItem('favs')) || []
 
 export const ContextProvider = ({ children }) => {
   //Aqui deberan implementar la logica propia del Context
-  const [dentists, setDentists] = useState([])
+  const [dentistsState, dentistsDispatch] = useReducer(
+    dentistsReducer,
+    initDentistsState
+  )
+
+  const fecthDentistsData = () => {
+    axios('https://jsonplaceholder.typicode.com/users')
+      .then(res =>
+        dentistsDispatch({ type: 'GET_DENTISTS', payload: res.data })
+      )
+      .catch(err => console.log(err))
+  }
 
   useEffect(() => {
-    const fetchDentists = async () => {
-      const response = await fetch('https://jsonplaceholder.typicode.com/users')
-      const data = await response.json()
-      setDentists(data)
-    }
-
-    fetchDentists()
+    fecthDentistsData()
   }, [])
+
+  // console.log(dentistsState)
 
   const [favState, favDispatch] = useReducer(favReducer, initFavState)
 
@@ -39,7 +39,14 @@ export const ContextProvider = ({ children }) => {
   }, [favState])
 
   return (
-    <ContextGlobal.Provider value={{ dentists, favState, favDispatch }}>
+    <ContextGlobal.Provider
+      value={{
+        dentistsState,
+        dentistsDispatch,
+        favState,
+        favDispatch
+      }}
+    >
       {children}
     </ContextGlobal.Provider>
   )
