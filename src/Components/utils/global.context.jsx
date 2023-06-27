@@ -17,7 +17,7 @@ export const ContextProvider = ({ children }) => {
     initDentistsState
   )
 
-  const fecthDentistsData = () => {
+  const fetchDentistsData = () => {
     axios('https://jsonplaceholder.typicode.com/users')
       .then(res =>
         dentistsDispatch({ type: 'GET_DENTISTS', payload: res.data })
@@ -26,7 +26,7 @@ export const ContextProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    fecthDentistsData()
+    fetchDentistsData()
   }, [])
 
   // console.log(dentistsState)
