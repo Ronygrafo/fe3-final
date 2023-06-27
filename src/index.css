@@ -192,7 +192,7 @@ p {
 .back-btn {
   position: absolute;
   left: 10%;
-  top: 94px;
+  top: 96px;
   height: 30px;
   background: transparent;
   font-size: 2rem;
@@ -200,6 +200,10 @@ p {
   border: none;
 }
 
-.detail-heading{
+.dark .back-btn {
+  color: white;
+}
+
+.detail-heading {
   font-size: 1.7rem;
 }
