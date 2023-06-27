@@ -1,17 +1,32 @@
 import axios from 'axios'
 import { createContext, useEffect, useReducer } from 'react'
-import { dentistsReducer, favReducer } from './reducers'
-
-export const initialState = { theme: '', data: [] }
+import { dentistsReducer, favReducer, themeReducer } from './reducers'
 
 export const ContextGlobal = createContext(undefined)
+
+const initThemeState = {
+  theme: localStorage.getItem('theme') || '',
+  data: []
+}
 
 const initDentistsState = { dentistsList: [], dentist: {} }
 
 const initFavState = JSON.parse(localStorage.getItem('favs')) || []
 
 export const ContextProvider = ({ children }) => {
-  //Aqui deberan implementar la logica propia del Context
+  // Theme Ruducer
+  const [themeState, themeDispatch] = useReducer(themeReducer, initThemeState)
+
+  useEffect(() => {
+    const root = document.documentElement
+    if (themeState.theme === 'light') {
+      root.classList.remove('dark')
+    } else {
+      root.classList.add('dark')
+    }
+  }, [themeState.theme])
+
+  // Dentists Reducer
   const [dentistsState, dentistsDispatch] = useReducer(
     dentistsReducer,
     initDentistsState
@@ -29,12 +44,10 @@ export const ContextProvider = ({ children }) => {
     fetchDentistsData()
   }, [])
 
-  // console.log(dentistsState)
-
+  // Favs Reducer
   const [favState, favDispatch] = useReducer(favReducer, initFavState)
 
   useEffect(() => {
-    // console.log(favState)
     localStorage.setItem('favs', JSON.stringify(favState))
   }, [favState])
 
@@ -44,7 +57,9 @@ export const ContextProvider = ({ children }) => {
         dentistsState,
         dentistsDispatch,
         favState,
-        favDispatch
+        favDispatch,
+        themeState,
+        themeDispatch
       }}
     >
       {children}

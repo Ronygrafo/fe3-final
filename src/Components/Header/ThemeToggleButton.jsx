@@ -1,44 +1,20 @@
-import { useState, useEffect } from 'react'
+import { useContext } from 'react'
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
+import { ContextGlobal } from '../utils/global.context'
 
 const themes = ['light', 'dark']
 
 export default function ThemeToggleButton() {
-  const [isMounted, setIsMounted] = useState(false)
-
-  const [theme, setTheme] = useState(() => {
-    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-      return localStorage.getItem('theme')
-    }
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark'
-    }
-    return 'light'
-  })
+  const { themeState, themeDispatch } = useContext(ContextGlobal)
 
   const toggleTheme = () => {
-    const t = theme === 'light' ? 'dark' : 'light'
-    localStorage.setItem('theme', t)
-    setTheme(t)
+    themeDispatch({ type: 'TOGGLE_THEME' })
   }
 
-  useEffect(() => {
-    const root = document.documentElement
-    if (theme === 'light') {
-      root.classList.remove('dark')
-    } else {
-      root.classList.add('dark')
-    }
-  }, [theme])
-
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
-
-  return isMounted ? (
+  return (
     <div className='theme-switch'>
       {themes.map(t => {
-        const checked = t === theme
+        const checked = t === themeState.theme
         return (
           <button
             key={t}
@@ -51,7 +27,5 @@ export default function ThemeToggleButton() {
         )
       })}
     </div>
-  ) : (
-    <div />
   )
 }

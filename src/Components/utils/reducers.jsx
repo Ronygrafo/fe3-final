@@ -19,3 +19,14 @@ export const favReducer = (state, action) => {
       throw new Error()
   }
 }
+
+export const themeReducer = (state, action) => {
+  switch (action.type) {
+    case 'TOGGLE_THEME':
+      const newTheme = state.theme === 'light' ? 'dark' : 'light'
+      localStorage.setItem('theme', newTheme)
+      return { ...state, theme: newTheme }
+    default:
+      return state
+  }
+}
