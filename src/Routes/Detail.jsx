@@ -1,16 +1,26 @@
 import { useParams, useNavigate } from 'react-router-dom'
-import { useContext } from 'react'
+import { useEffect, useContext } from 'react'
 import { ContextGlobal } from '../Components/utils/global.context'
 import { BsArrowLeft } from 'react-icons/bs'
+import axios from 'axios'
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Detail = () => {
-  const { dentists } = useContext(ContextGlobal)
+  const { dentistsState, dentistsDispatch } = useContext(ContextGlobal)
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
   const { id } = useParams()
   const navigate = useNavigate()
-  const currentDentist = dentists.find(dentist => dentist.id === parseInt(id))
+
+  const fetchDentistData = () => {
+    axios('https://jsonplaceholder.typicode.com/users/' + id)
+      .then(res => dentistsDispatch({ type: 'GET_DENTIST', payload: res.data }))
+      .catch(err => console.log(err))
+  }
+
+  useEffect(() => {
+    fetchDentistData()
+  })
 
   return (
     <>
@@ -25,15 +35,15 @@ const Detail = () => {
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
 
       <div className='card-grid'>
-        <div className='card' style={{ width: '260px' , gap: '8px' }}>
+        <div className='card' style={{ width: '260px', gap: '8px' }}>
           <img src='../images/doctor.jpg' alt='doctor' />
-          <h3 style={{margin: '0' }}>{currentDentist?.name}</h3>
+          <h3 style={{ margin: '0' }}>{dentistsState.dentist.name}</h3>
           <strong>
-            <p>ID: {currentDentist?.id}</p>
+            <p>ID: {dentistsState.dentist.id}</p>
           </strong>
-          <p>{currentDentist?.email}</p>
-          <p>{currentDentist?.phone}</p>
-          <p>{currentDentist?.website}</p>
+          <p>{dentistsState.dentist.email}</p>
+          <p>{dentistsState.dentist.phone}</p>
+          <p>{dentistsState.dentist.website}</p>
         </div>
       </div>
     </>
