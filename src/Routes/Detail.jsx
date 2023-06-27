@@ -22,6 +22,8 @@ const Detail = () => {
     fetchDentistData()
   })
 
+  const { name, email, phone, website } = dentistsState.dentist
+
   return (
     <>
       {/* <h1>Dentist id {currentDentist?.id}</h1> */}
@@ -37,13 +39,13 @@ const Detail = () => {
       <div className='card-grid'>
         <div className='card' style={{ width: '260px', gap: '8px' }}>
           <img src='../images/doctor.jpg' alt='doctor' />
-          <h3 style={{ margin: '0' }}>{dentistsState.dentist.name}</h3>
+          <h3 style={{ margin: '0' }}>{name}</h3>
           <strong>
-            <p>ID: {dentistsState.dentist.id}</p>
+            <p>ID: {id}</p>
           </strong>
-          <p>{dentistsState.dentist.email}</p>
-          <p>{dentistsState.dentist.phone}</p>
-          <p>{dentistsState.dentist.website}</p>
+          <p>{email}</p>
+          <p>{phone}</p>
+          <p>{website}</p>
         </div>
       </div>
     </>
