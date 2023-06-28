@@ -22,7 +22,6 @@ code {
 a {
   color: #000;
   text-decoration: none;
-  margin: 5px;
   cursor: pointer;
 }
 
@@ -206,4 +205,44 @@ p {
 
 .detail-heading {
   font-size: 1.7rem;
+}
+
+.skeleton_img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  background: linear-gradient(
+    to right,
+    #f3f3f3 0%,
+    #cdcccc 20%,
+    #f3f3f3 40%,
+    #f3f3f3 100%
+  );
+  background-size: 200% 100%;
+  animation: wave-slide 2.5s linear infinite;
+}
+
+.skeleton_info {
+  width: 90%;
+  background: linear-gradient(
+    to right,
+    #f3f3f3 0%,
+    #cdcccc 20%,
+    #f3f3f3 40%,
+    #f3f3f3 100%
+  );
+  background-size: 200% 100%;
+  animation: wave-slide 2.5s linear infinite;
+  border-radius: 5px;
+  color: red;
+  height: 21.6px;
+}
+
+@keyframes wave-slide {
+  0% {
+    background-position: 200% 0%;
+  }
+  100% {
+    background-position: -200% 0%;
+  }
 }
