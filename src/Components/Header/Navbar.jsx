@@ -15,15 +15,6 @@ const Navbar = () => {
         <li className='desktop-nav' > <NavLink to='/favs'>Favoritos</NavLink> </li>
         <ThemeToggleButton />
       </ul>
-      
-      <div className='mobile-menu'>
-        <ul>
-          <li> <NavLink to='/' end> Inicio</NavLink> </li>
-          <li> <NavLink to='/contact'>Contacto</NavLink> </li>
-          <li> <NavLink to='/favs'>Favoritos</NavLink> </li>
-        </ul>
-      </div>
-
     </nav>
   )
 }
