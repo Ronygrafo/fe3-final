@@ -4,9 +4,17 @@ import { dentistsReducer, favReducer, themeReducer } from './reducers'
 
 export const ContextGlobal = createContext(undefined)
 
-const initThemeState = {
-  theme: localStorage.getItem('theme') || '',
-  data: []
+const initThemeState = () => {
+  const storedTheme = localStorage.getItem('theme')
+  const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)')
+    .matches
+    ? 'dark'
+    : 'light'
+  const initialTheme = storedTheme || preferredTheme
+
+  localStorage.setItem('theme', initialTheme)
+
+  return { theme: initialTheme }
 }
 
 const initDentistsState = { dentistsList: [], dentist: {} }
@@ -15,7 +23,11 @@ const initFavState = JSON.parse(localStorage.getItem('favs')) || []
 
 export const ContextProvider = ({ children }) => {
   // Theme Ruducer
-  const [themeState, themeDispatch] = useReducer(themeReducer, initThemeState)
+  const [themeState, themeDispatch] = useReducer(
+    themeReducer,
+    {},
+    initThemeState
+  )
 
   useEffect(() => {
     const root = document.documentElement
