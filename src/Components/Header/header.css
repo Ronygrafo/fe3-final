@@ -100,12 +100,8 @@ nav .theme-switch button.bg-white {
     display: none;
   }
 
-/*   nav ul {
-    gap: 0;
-  } */
-
-  nav {
-    width: 100px;
+  .theme-switch{
+    width: 60px;
   }
 
   .hamburger{
