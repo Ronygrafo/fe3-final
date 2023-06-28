@@ -74,3 +74,48 @@ nav .theme-switch button.bg-white {
 .dark header {
   background-color: #2b3035;
 }
+
+/* VISIBILIDAD COMPONENTES */
+
+.hamburger{
+  display: none;
+}
+
+.mobile-menu{
+  display: none;
+}
+
+@media (max-width: 425px) {
+
+  .content-wrap{
+    overflow-x: hidden;
+  }
+
+  header .container {
+    max-width: 100vw;
+    justify-content: space-between;
+  }
+  
+  .desktop-nav {
+    display: none;
+  }
+
+/*   nav ul {
+    gap: 0;
+  } */
+
+  nav {
+    width: 100px;
+  }
+
+  .hamburger{
+    display: block;
+    margin-right: 12px;
+  }
+
+  header h1 {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+
+}

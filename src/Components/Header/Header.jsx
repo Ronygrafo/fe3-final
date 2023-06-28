@@ -6,6 +6,7 @@ export function Header() {
   return (
     <header>
       <div className='container'>
+      <button className='hamburger'>H</button>
         <h1>
           <NavLink to='/' end>
             <span>D</span>H Odonto 🦷
