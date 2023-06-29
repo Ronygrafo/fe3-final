@@ -1,9 +1,9 @@
 export const dentistsReducer = (state, action) => {
   switch (action.type) {
     case 'GET_DENTISTS':
-      return { ...state, dentistsList: action.payload }
+      return { dentistsList: action.payload, dentist: state.dentist }
     case 'GET_DENTIST':
-      return { ...state, dentist: action.payload }
+      return { dentistsList: state.dentistsList, dentist: action.payload }
     default:
       throw new Error()
   }
