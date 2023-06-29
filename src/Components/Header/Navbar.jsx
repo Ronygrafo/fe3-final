@@ -8,16 +8,11 @@ const Navbar = () => {
     <nav>
       {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
       {/* Deberan implementar ademas la logica para cambiar de Theme con el button */}
+
       <ul>
-        <li>
-          <NavLink to='/' end> Inicio</NavLink>
-        </li>
-        <li>
-          <NavLink to='/contact'>Contacto</NavLink>
-        </li>
-        <li>
-          <NavLink to='/favs'>Favoritos</NavLink>
-        </li>
+        <li className='desktop-nav'> <NavLink to='/' end> Inicio</NavLink> </li>
+        <li className='desktop-nav' > <NavLink to='/contact'>Contacto</NavLink> </li>
+        <li className='desktop-nav' > <NavLink to='/favs'>Favoritos</NavLink> </li>
         <ThemeToggleButton />
       </ul>
     </nav>
