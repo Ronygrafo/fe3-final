@@ -114,8 +114,13 @@ nav .theme-switch button.bg-white {
     font-size: 1.8rem;
   }
 
+  .mobile-menu:hover{
+    transform: translateX(-290px);
+    transition: all 0.4s ease-in-out;
+  }
+
   .mobile-menu{
-    z-index: 10;
+    z-index: 2;
     display: block;
     position: absolute;
     top: 0;
@@ -154,7 +159,7 @@ nav .theme-switch button.bg-white {
     font-weight: bold;
     pointer-events: none;
   }
-  .mobile-menu ul li button{
+  .close-hamburger{
     margin-bottom: 3rem;
   }
   
