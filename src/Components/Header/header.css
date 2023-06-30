@@ -1,5 +1,5 @@
 header {
-  background-color: #f8f9fa;
+  background-color: #cfcfcf;
   display: flex;
   justify-content: center;
   position: sticky;
@@ -22,6 +22,10 @@ header h1 {
 }
 
 header h1 span {
+  color: rgb(200, 0, 0);
+}
+
+.dark header h1 span {
   color: rgb(236, 47, 47);
 }
 
@@ -73,94 +77,4 @@ nav .theme-switch button.bg-white {
 
 .dark header {
   background-color: #2b3035;
-}
-
-/* VISIBILIDAD COMPONENTES */
-
-.hamburger{
-  display: none;
-}
-
-.mobile-menu{
-  display: none;
-}
-
-@media (max-width: 425px) {
-
-  .content-wrap{
-    overflow-x: hidden;
-  }
-
-  header .container {
-    max-width: 100vw;
-    justify-content: space-between;
-  }
-  
-  .desktop-nav {
-    display: none;
-  }
-
-  .theme-switch{
-    width: 59px;
-  }
-
-  .hamburger{
-    display: block;
-    margin-right: 12px;
-  }
-
-  header h1 {
-    width: 100%;
-    font-size: 1.8rem;
-  }
-
-  .mobile-menu:hover{
-    transform: translateX(-290px);
-    transition: all 0.4s ease-in-out;
-  }
-
-  .mobile-menu{
-    z-index: 2;
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 60vw;
-    height: 100%;
-    padding: 1.3rem 1rem;
-    background-color: #2b3035ee;
-  }
-
-  .mobile-menu ul{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    list-style: none;
-    gap: 21px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .mobile-menu a{
-    color: #e5e7eb;
-  }
-  .mobile-nav ::after{
-    display: block;
-    content: "";
-    box-sizing: border-box;
-    height: 1px;
-    width: 300px;
-    background-color: rgb(82 82 91 / 1);
-    width: 80%;
-    margin-top: 1rem;
-  }
-
-  .mobile-menu a.active{
-    font-weight: bold;
-    pointer-events: none;
-  }
-  .close-hamburger{
-    margin-bottom: 3rem;
-  }
-  
 }

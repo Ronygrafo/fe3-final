@@ -25,10 +25,6 @@ a {
   cursor: pointer;
 }
 
-a:hover {
-  color: rgb(136, 136, 136);
-}
-
 footer {
   display: flex;
   justify-content: center;
@@ -37,7 +33,7 @@ footer {
   position: absolute;
   bottom: 0;
   height: 104px;
-  background-color: #f8f9fa;
+  background-color: #cfcfcf;
 }
 
 footer > img {
@@ -82,7 +78,7 @@ footer > p {
   border: 0.5px solid rgb(136, 136, 136);
   gap: 12px;
   border-radius: 10px;
-  background-color: #f8f9fa;
+  background-color: #f3f4f4;
   padding-bottom: 12px;
 }
 
