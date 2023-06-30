@@ -29,6 +29,10 @@ header h1 span {
   color: rgb(236, 47, 47);
 }
 
+nav a {
+  padding-block: 5px;
+}
+
 nav a.active {
   font-weight: bold;
   pointer-events: none;
